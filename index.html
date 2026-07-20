@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clackmannanshire Streamer School</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#07070d;
+    --card:#12121c;
+    --purple:#8b5cf6;
+    --blue:#3b82f6;
+    --pink:#ec4899;
+    --text:#ffffff;
+    --muted:#b8b8c9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Space Grotesk",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/* Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(139,92,246,.3),transparent 25%),
+    radial-gradient(circle at 80% 10%,rgba(59,130,246,.25),transparent 30%),
+    radial-gradient(circle at 60% 90%,rgba(236,72,153,.2),transparent 25%);
+    z-index:-1;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.35);
+}
+
+nav h2{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:5rem;
+    line-height:1;
+    background:linear-gradient(90deg,var(--purple),var(--pink),var(--blue));
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    max-width:700px;
+    margin:25px auto;
+    color:var(--muted);
+    font-size:1.2rem;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.button{
+    padding:16px 34px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.primary{
+    background:linear-gradient(90deg,var(--purple),var(--blue));
+}
+
+.secondary{
+    border:2px solid white;
+}
+
+.button:hover{
+    transform:translateY(-5px);
+}
+
+/* Sections */
+
+section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* Cards */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:var(--purple);
+}
+
+.card h3{
+    margin-bottom:15px;
+}
+
+/* Event */
+
+.event{
+    background:linear-gradient(135deg,#141424,#0b1226);
+    border-radius:25px;
+    padding:50px;
+    text-align:center;
+}
+
+.event p{
+    margin:12px 0;
+    color:var(--muted);
+}
+
+/* Footer */
+
+footer{
+    padding:60px;
+    text-align:center;
+    color:#888;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:3rem;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>🎮 CSS</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#event">Event</a></li>
+<li><a href="#apply">Apply</a></li>
+</ul>
+
+</nav>
+
+<div class="hero">
+
+<div>
+
+<h1>CLACKMANNANSHIRE<br>STREAMER SCHOOL</h1>
+
+<p>
+A one-day experience inspired by creator academies where S3 students
+learn streaming, content creation, editing, branding and esports.
+</p>
+
+<div class="buttons">
+
+<a class="button primary" href="YOUR_GOOGLE_FORM" target="_blank">
+Apply Now
+</a>
+
+<a class="button secondary" href="#about">
+Learn More
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<section id="about">
+
+<h2 class="title">What is Streamer School?</h2>
+
+<div class="event">
+
+<p>
+Clackmannanshire Streamer School is designed for S3 students who are
+interested in gaming, streaming and creating content.
+</p>
+
+<p>
+Whether you dream of Twitch, YouTube or TikTok, you'll learn the skills
+used by today's biggest creators.
+</p>
+
+</div>
+
+</section>
+
+<section id="courses">
+
+<h2 class="title">Courses</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🎥 Streaming</h3>
+<p>OBS, webcams, microphones and livestream setup.</p>
+</div>
+
+<div class="card">
+<h3>🎬 Editing</h3>
+<p>Create YouTube videos and TikTok clips.</p>
+</div>
+
+<div class="card">
+<h3>🎮 Gaming</h3>
+<p>Making entertaining gaming content.</p>
+</div>
+
+<div class="card">
+<h3>🎨 Branding</h3>
+<p>Logos, overlays, thumbnails and identity.</p>
+</div>
+
+<div class="card">
+<h3>💬 Community</h3>
+<p>Building a positive online audience.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Creator Skills</h3>
+<p>Confidence, teamwork and presentation.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="event">
+
+<h2 class="title">Event Information</h2>
+
+<div class="event">
+
+<h2>Admissions Open</h2>
+
+<p>📅 Date: TBA</p>
+
+<p>📍 Location: Clackmannanshire</p>
+
+<p>👥 Open to 12-17 yr old Students</p>
+
+<p>💷 Cost: FREE</p>
+
+<br>
+
+<a class="button primary" href="YOUR_GOOGLE_FORM" target="_blank">
+Apply Today
+</a>
+
+</div>
+
+</section>
+
+<section id="apply">
+
+<h2 class="title">Ready to Join?</h2>
+
+<div class="event">
+
+<p>
+Applications are open now.
+Places are limited.
+</p>
+
+<br>
+
+<a class="button primary" href="https://forms.gle/HaMxA4F66fpPSKj88" target="_blank">
+Complete Application Form
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Clackmannanshire Streamer School
+</p>
+
+</footer>
+
+</body>
+</html>
